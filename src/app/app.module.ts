@@ -14,7 +14,8 @@ import { LoginComponent } from './admin/login/login.component';
 const routes: Routes = [
 	{ path: '', redirectTo: 'home', pathMatch: 'full' },
 	{ path: 'home', component: HomeComponent },
-	{ path: 'overview', component: OverviewComponent }
+	{ path: 'overview', component: OverviewComponent },
+	{ path: 'login' ,component: LoginComponent}
 ];
 
 var config = {
