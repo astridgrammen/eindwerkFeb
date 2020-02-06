@@ -1,1 +1,5 @@
 <p>home works!</p>
+
+<li *ngIf = "authService.isLoggedIn" class = "nav-item" >
+    <button (click) = "authService.logout()" >Logout</button>
+</li>
