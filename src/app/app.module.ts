@@ -11,12 +11,14 @@ import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { LoginComponent } from './admin/login/login.component';
 
-import { CostService } from './shared/services/cost.service' ;
+import { CostService } from './shared/services/cost.service';
+import { NavComponent } from './nav/nav.component' ;
 
 const routes: Routes = [
 	{ path: '', redirectTo: 'home', pathMatch: 'full' },
 	{ path: 'home', component: HomeComponent },
 	{ path: 'overview', component: OverviewComponent },
+	{ path: 'nav', component: NavComponent },
 	{ path: 'login' ,component: LoginComponent}
 ];
 
@@ -31,7 +33,7 @@ var config = {
   };
 
 @NgModule({
-	declarations: [ AppComponent, HomeComponent, OverviewComponent, LoginComponent ],
+	declarations: [ AppComponent, HomeComponent, OverviewComponent, LoginComponent, NavComponent ],
 	imports: [ BrowserModule, AppRoutingModule, RouterModule.forRoot(routes), AngularFireModule.initializeApp(config),
 		AngularFireAuthModule ],
 	providers: [

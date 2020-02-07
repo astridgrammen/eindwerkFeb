@@ -1,7 +1,8 @@
 <div class="container">
   <h1>{{title}}</h1>
   <a routerLink="home">home - </a>
-  <a routerLink="overview">overview</a>
+  <a routerLink="overview">overview - </a>
+  <a routerLink="nav">Nav</a>
   <router-outlet></router-outlet>
 
   <hr>
@@ -23,7 +24,9 @@
               (click)="addCountry(newDescription.value, newCost.value, newCategory.value, newType.value)">Add</button>
 
           </div>
-          <!--
+
+
+        <!--
           <datalist id="browsers">
             <option value="Internet Explorer">
             <option value="Firefox">
