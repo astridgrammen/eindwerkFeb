@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+//import { Costs} from './shared/model/costs.model' ;
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

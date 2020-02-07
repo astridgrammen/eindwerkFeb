@@ -22,6 +22,7 @@
     "@angular/router": "~8.2.14",
     "bootstrap": "^4.4.1",
     "firebase": "^7.8.0",
+    "json-server" : "json-server --watch src/assets/data/costs.json" ,
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
