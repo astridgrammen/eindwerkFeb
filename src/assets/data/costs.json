@@ -10,7 +10,7 @@
         {
             "id": 2,
             "description": "Carrefour",
-            "cost": "89,45",
+            "cost": 89.49,
             "category": "Shopping",
             "type": "Variable cost"
             
@@ -18,14 +18,14 @@
         {
             "id": 3,
             "description": "Bike fixing",
-            "cost": "20",
+            "cost": 20,
             "category": "Transport",
             "type": "Variable cost"
         },
         {
             "id": 4,
             "description": "Drinks",
-            "cost": "22,89",
+            "cost": 22.89,
             "category": "Entertainment",
             "type": "Variable cost"
         }
