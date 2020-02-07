@@ -7,4 +7,4 @@ export class Costs {
     public type: string
 
     ) {}
-    }
+}

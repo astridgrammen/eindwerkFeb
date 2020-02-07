@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
+import { CostService } from './shared/services/cost.service' ;
 
-//import { Costs} from './shared/model/costs.model' ;
+//import { Costs } from './shared/model/costs.model' ;
 
 @Component({
   selector: 'app-root',

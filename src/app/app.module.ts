@@ -11,6 +11,8 @@ import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { LoginComponent } from './admin/login/login.component';
 
+import { CostService } from './shared/services/cost.service' ;
+
 const routes: Routes = [
 	{ path: '', redirectTo: 'home', pathMatch: 'full' },
 	{ path: 'home', component: HomeComponent },
@@ -32,7 +34,9 @@ var config = {
 	declarations: [ AppComponent, HomeComponent, OverviewComponent, LoginComponent ],
 	imports: [ BrowserModule, AppRoutingModule, RouterModule.forRoot(routes), AngularFireModule.initializeApp(config),
 		AngularFireAuthModule ],
-	providers: [],
+	providers: [
+		CostService
+	],
 	bootstrap: [ AppComponent ]
 })
 export class AppModule {}
