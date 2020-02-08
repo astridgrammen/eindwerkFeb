@@ -10,10 +10,13 @@
     <h1>Mijn landen via API</h1>
     <div class="row">
       <div class="col-md-6">
-        <div class="list-group">
-          <li class="list-group-item" (click)="getCountry(country.id)" *ngFor="let country of countries$ | async">
-            {{ cost.id }} - {{ cost.description }} - {{ cost.category}} - {{ cost.type}}
-          </li>
+        
+
+          <div class="list-group">
+            <li class="list-group-item" (click)="getCosts(costs.id)" *ngFor="let costs of costs$ | async">
+              {{ costs.id }} - {{ costs.description }} - {{ costs.cost }} - {{ costs.category}} - {{ costs.type}}
+            </li>
+          </div>
 
           <div class="col">
             <input type="text" placeholder="Description" #newDescription class="form-control-lg">
@@ -21,7 +24,7 @@
             <input type="text" placeholder="Category" #newCategory class="form-control-lg">
             <input type="text" placeholder="Type" #newType class="form-control-lg">
             <button class="btn btn-primary"
-              (click)="addCountry(newDescription.value, newCost.value, newCategory.value, newType.value)">Add</button>
+              (click)="addCost(newDescription.value, newCost.value, newCategory.value, newType.value)">Add</button>
 
           </div>
 
