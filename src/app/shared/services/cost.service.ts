@@ -15,7 +15,7 @@ export class CostService {
     getCosts(): Observable<Costs[]> {
         return this.http
             .get<Costs[]>(this.url)
-            .pipe(tap(result => console.log("via json-server: ", result)));
+            //.pipe(tap(result => console.log("via json-server: ", result)));
     }
     /*
     getCost(id: number) {
@@ -32,11 +32,10 @@ export class CostService {
   }
 
   editCost(newCost: Costs):Observable<any>{
-    console.log(newCost.id);
+    //console.log(newCost.id);
     const headers = new HttpHeaders().set("Content-type", "application/json");
     return this.http.put(this.url + "/" + newCost.id, newCost, {
       headers: headers
     });
   }
-
 }

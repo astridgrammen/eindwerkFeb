@@ -16,8 +16,8 @@
     },
     {
       "id": 3,
-      "description": "Rent",
-      "cost": "450",
+      "description": "Huur",
+      "cost": "5000",
       "category": "House",
       "type": "Fixed"
     }
