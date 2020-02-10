@@ -20,7 +20,6 @@ export class AppComponent implements OnInit {
       this.costs$ = this.costService.getCosts();
   }
 
-  
   addCost(costDescription: string, costCost: number, costCategory: string, costType: string) {
 
       const newCost = new Costs(null, costDescription, costCost, costCategory, costType);
@@ -31,11 +30,14 @@ export class AppComponent implements OnInit {
   }
     deleteCost(value){
         this.costService.deleteCost(value).subscribe();
-
     }
-    /*
-    editCost(value) {
-        this.costService.editCost(value);
-    }*/
+
+    editCost(costId: number, costDescription: string, costCost: number, costCategory: string, costType:string) {
+        const newCost = new Costs(costId, costDescription, costCost, costCategory, costType);
+        this.costService.editCost(newCost)
+            .subscribe((addedCost: Costs) => {
+                this.costs$ = this.costService.getCosts();
+            });
+    }
 
 }

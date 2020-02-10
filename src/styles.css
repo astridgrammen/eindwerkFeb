@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+/*
+COLOURS
+
+#F0F7F7     licht blauw
+#AEDADA     donker blauw
+
+
+
+*/
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+h1{
+    font-family: "Montserrat";
+}
+
+input.form-control-lg.edit {
+    border: none!important;
+    border-bottom: #a79486!important;
+    border-bottom: dashed!important;
+    border-right: none;
+    border-left: none;
+    border-radius: 0px;
+    border-top: none;
+    border-width: thin!important;
+    margin-bottom: 20px!important;
+}

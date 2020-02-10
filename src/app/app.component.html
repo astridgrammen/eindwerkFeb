@@ -2,12 +2,45 @@
   <h1>Budget overview app</h1>
 
   <a routerLink="home">home - </a>
-  <a routerLink="overview">overview - </a>
+  <a routerLink="overview">overview</a>
   <a routerLink="nav">Nav</a>
 
   <router-outlet></router-outlet>
 
   <hr>
+  <div class="container">
+    <h1>My costs</h1>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="list-group">
+          <li class="list-group-item" *ngFor="let costs of costs$ | async ">
+            <input type="hidden" value="{{ costs.id }}" #newId class="form-control-lg edit">
+            <input type="text" value="{{ costs.description }}" #newDescription class="form-control-lg edit">
+            <input type="text" value="{{ costs.cost }}" #newCost class="form-control-lg edit">
+            <input type="text" value="{{ costs.category}}" #newCategory class="form-control-lg edit">
+            <input type="text" value="{{ costs.type}}" #newType class="form-control-lg edit">
+            <button (click)="deleteCost(costs.id)" class="btn btn-danger">X</button>
+            <button class="btn btn-primary"
+              (click)="editCost(newId.value, newDescription.value, newCost.value, newCategory.value, newType.value)">Edit</button>
+          </li>
+        </div>
+        <div class="col">
+          <input type="text" placeholder="Description" #newDescription class="form-control-lg">
+          <input type="text" placeholder="Cost" #newCost class="form-control-lg">
+          <input type="text" placeholder="Category" #newCategory class="form-control-lg">
+          <input type="text" placeholder="Type" #newType class="form-control-lg">
+          <button class="btn btn-primary"
+            (click)="addCost(newDescription.value, newCost.value, newCategory.value, newType.value)">Add</button>
+        </div>
+
+
+        <div class="text-center">Copyright Frauke, Janique & Astrid inc. &copy;2020</div>
+     
+      </div>
+    </div>
+
+
+      <!--
   <div class="container">
     <h1>My costs</h1>
     <div class="row">
@@ -33,3 +66,5 @@
 
           <div class="text-center">Copyright Frauke, Janique & Astrid inc. &copy;2020</div>
         </div>
+
+-->

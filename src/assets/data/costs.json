@@ -16,10 +16,10 @@
     },
     {
       "id": 3,
-      "description": "Bike fixing",
-      "cost": 20,
-      "category": "Transport",
-      "type": "Variable cost"
+      "description": "Rent",
+      "cost": "450",
+      "category": "House",
+      "type": "Fixed"
     }
   ]
 }

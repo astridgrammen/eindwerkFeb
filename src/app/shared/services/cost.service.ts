@@ -3,13 +3,12 @@ import { Costs } from '../model/costs.model';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 import { tap } from "rxjs/operators";
-import { Observable, from } from "rxjs";
+import { Observable } from "rxjs";
 
 @Injectable ()
 
 export class CostService {
     url = "http://localhost:3000/costs";
-
 
     constructor(private http: HttpClient) { }
 
@@ -32,13 +31,12 @@ export class CostService {
     return this.http.delete(this.url + "/" + value)
   }
 
-  /*
-  editCost(i: number, costDescription: string, costCost: number, costCategory: string, costType: string){
-    this.http.costs.i = costDescription;
-    this.http.costs$.costDescription = costDescription;
-    this.http.costs$.costCost = costCost;
-    this.costs$
+  editCost(newCost: Costs):Observable<any>{
+    console.log(newCost.id);
+    const headers = new HttpHeaders().set("Content-type", "application/json");
+    return this.http.put(this.url + "/" + newCost.id, newCost, {
+      headers: headers
+    });
   }
-*/
 
 }
