@@ -20,20 +20,6 @@
       "cost": 20,
       "category": "Transport",
       "type": "Variable cost"
-    },
-    {
-      "id": 4,
-      "description": "Drinks",
-      "cost": 22.89,
-      "category": "Entertainment",
-      "type": "Variable cost"
-    },
-    {
-      "id": 5,
-      "description": "Supermarket",
-      "cost": "600",
-      "category": "Food",
-      "type": "Variable cost"
     }
   ]
 }

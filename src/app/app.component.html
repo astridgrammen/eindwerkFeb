@@ -13,9 +13,10 @@
         
 
           <div class="list-group">
-            <li class="list-group-item" *ngFor="let costs of costs$ | async">
+            <li class="list-group-item" *ngFor="let costs of costs$ | async ">
               {{ costs.id }} - {{ costs.description }} - {{ costs.cost }} - {{ costs.category}} - {{ costs.type}} 
               <button (click)="deleteCost(costs.id)">X</button>
+              <button (click)="editCost(costs.id)">Edit</button>
             </li>
           </div>
 

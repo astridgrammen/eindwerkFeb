@@ -30,14 +30,12 @@ export class AppComponent implements OnInit {
               this.costs$ = this.costService.getCosts();
           });
   }
-  // Land verwijderen --> doorgeven aan de service
-  /*
-  deleteCountry(country: Country) {
-      //TODO
-  }
-  */
- deleteCost(value){
-    this.costService.deleteCost(value).subscribe();
+    deleteCost(value){
+        this.costService.deleteCost(value).subscribe();
 
- }
+    }/*
+    editCost(value) {
+        this.costService.editCost(value);
+    }*/
+
 }
