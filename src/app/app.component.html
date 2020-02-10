@@ -1,8 +1,10 @@
 <div class="container">
-  <h1>{{title}}</h1>
+  <h1>Budget overview app</h1>
+
   <a routerLink="home">home - </a>
   <a routerLink="overview">overview - </a>
   <a routerLink="nav">Nav</a>
+
   <router-outlet></router-outlet>
 
   <hr>
@@ -16,7 +18,7 @@
             <li class="list-group-item" *ngFor="let costs of costs$ | async ">
               {{ costs.id }} - {{ costs.description }} - {{ costs.cost }} - {{ costs.category}} - {{ costs.type}} 
               <button (click)="deleteCost(costs.id)">X</button>
-              <button (click)="editCost(costs.id)">Edit</button>
+              <button (click)="editCost(i, costDescription.value, costCost.value, costCategory.value, costType.value )">Edit</button>
             </li>
           </div>
 
@@ -27,23 +29,7 @@
             <input type="text" placeholder="Type" #newType class="form-control-lg">
             <button class="btn btn-primary"
               (click)="addCost(newDescription.value, newCost.value, newCategory.value, newType.value)">Add</button>
-
           </div>
-
-
-        <!--
-          <datalist id="browsers">
-            <option value="Internet Explorer">
-            <option value="Firefox">
-            <option value="Chrome">
-            <option value="Opera">
-            <option value="Safari">
-          </datalist>
-        -->
-
-
-
-
 
           <div class="text-center">Copyright Frauke, Janique & Astrid inc. &copy;2020</div>
         </div>

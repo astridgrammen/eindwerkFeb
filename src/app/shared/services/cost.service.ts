@@ -1,11 +1,9 @@
 import { Injectable } from "@angular/core";
-import { Costs } from '../model/costs.model' ;
+import { Costs } from '../model/costs.model';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 
-import { tap } from "rxjs/operators" ;
-import { Observable, from } from "rxjs" ;
-
-
+import { tap } from "rxjs/operators";
+import { Observable, from } from "rxjs";
 
 @Injectable ()
 
@@ -14,7 +12,7 @@ export class CostService {
 
 
     constructor(private http: HttpClient) { }
-    // alle countries retourneren
+
     getCosts(): Observable<Costs[]> {
         return this.http
             .get<Costs[]>(this.url)
@@ -34,12 +32,13 @@ export class CostService {
     return this.http.delete(this.url + "/" + value)
   }
 
-  editCost(costDescription: string, costCost: number, costCategory: string, costType: string){
-    //this.http.
-  }
-
   /*
-  editCost(i:number,value:string) {
-    this.countries[i].name=value;
-   }*/
+  editCost(i: number, costDescription: string, costCost: number, costCategory: string, costType: string){
+    this.http.costs.i = costDescription;
+    this.http.costs$.costDescription = costDescription;
+    this.http.costs$.costCost = costCost;
+    this.costs$
+  }
+*/
+
 }
