@@ -3,7 +3,8 @@ import { Costs } from '../model/costs.model' ;
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 import { tap } from "rxjs/operators" ;
-import { Observable } from "rxjs" ;
+import { Observable, from } from "rxjs" ;
+
 
 
 @Injectable ()
@@ -17,9 +18,10 @@ export class CostService {
             .get<Costs[]>(this.url)
             .pipe(tap(result => console.log("via json-server: ", result)));
     }
+    /*
     getCost(id: number) {
         return this.http.get<Costs>(`${this.url}/${id}`);
-    }
+    }*/
     addCost(newCost: Costs): Observable<any> {
         const headers = new HttpHeaders().set("Content-type", "application/json");
         return this.http.post(this.url, newCost, { headers: headers });
@@ -30,4 +32,7 @@ export class CostService {
    adjustCost
 
    */
+  deleteCost(value){
+    return this.http.delete(this.url + "/" + value)
+  }
 }

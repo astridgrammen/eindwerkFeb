@@ -34,13 +34,6 @@
       "cost": "600",
       "category": "Food",
       "type": "Variable cost"
-    },
-    {
-      "id": 6,
-      "description": "Rent",
-      "cost": "650",
-      "category": "House",
-      "type": "Fixed"
     }
   ]
 }

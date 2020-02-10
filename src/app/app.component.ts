@@ -4,6 +4,7 @@ import { CostService } from './shared/services/cost.service' ;
 import { Costs } from './shared/model/costs.model' ;
 import { Observable } from 'rxjs';
 
+import { Router } from "@angular/router"; 
 
 @Component({
   selector: 'app-root',
@@ -14,13 +15,11 @@ import { Observable } from 'rxjs';
 export class AppComponent implements OnInit {
   costs$: Observable<Costs[]>;
   currentcost$: Observable<Costs>
-  constructor(private costService: CostService) { }
+  constructor(private costService: CostService, private router: Router) { }
   ngOnInit() {
       this.costs$ = this.costService.getCosts();
   }
-  getCost(id: number) {
-      //console.log('boo');
-  }
+
   // Land toevoegen --> doorgeven aan de service
   addCost(costDescription: string, costCost: number, costCategory: string, costType: string) {
       // id === null, omdat deze auto wordt ingevuld door de json server
@@ -37,4 +36,8 @@ export class AppComponent implements OnInit {
       //TODO
   }
   */
+ deleteCost(value){
+    this.costService.deleteCost(value).subscribe();
+
+ }
 }
