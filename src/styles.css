@@ -54,3 +54,14 @@ input.form-control-lg.edit {
     color: #AEDADA;
     text-decoration: none;
 }
+
+.navigatie{
+    background-color: #006666;
+    font-family: "Montserrat";
+    font-weight: 800;
+
+}
+.navigatie a{
+    font-size: 3em;
+    color: white;
+}
