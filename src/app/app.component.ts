@@ -21,10 +21,11 @@ export class AppComponent implements OnInit {
   }
 
   addCost(costDescription: string, costCost: number, costCategory: string, costType: string) {
-
+      // id === null, omdat deze auto wordt ingevuld door de json server
       const newCost = new Costs(null, costDescription, costCost, costCategory, costType);
       this.costService.addCost(newCost)
           .subscribe((addedCost: Costs) => {
+              // countries opnieuw ophalen in de subscription
               this.costs$ = this.costService.getCosts();
           });
   }

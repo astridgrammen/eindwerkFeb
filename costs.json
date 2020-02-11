@@ -1,19 +1,32 @@
 {
-  "posts": [
+  "costs": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "description": "Car insurrance",
+      "cost": 40,
+      "category": "Shopping",
+      "type": "Fixed cost"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "description": "Carrefour",
+      "cost": 89.49,
+      "category": "Shopping",
+      "type": "Variable cost"
+    },
+    {
+      "id": 3,
+      "description": "Bike fixing",
+      "cost": 20,
+      "category": "Transport",
+      "type": "Variable cost"
+    },
+    {
+      "id": 4,
+      "description": "Drinks",
+      "cost": 22.89,
+      "category": "Entertainment",
+      "type": "Variable cost"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

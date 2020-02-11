@@ -25,6 +25,7 @@ export class AuthService {
       await this.afAuth.auth.signInWithEmailAndPassword(email, password)
       this.router.navigate(['/']);
     } catch (e) {
+      //alert("Error!" + e.message);
       console.log("inlog error");
       document.getElementById("error").innerHTML = "<p>Login fail, please try again...</p>";
     }

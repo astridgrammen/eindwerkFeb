@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { Costs } from '../model/costs.model';
+import { Costs } from '../model/costs.model' ;
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 import { tap } from "rxjs/operators";
@@ -11,7 +11,7 @@ export class CostService {
     url = "http://localhost:3000/costs";
 
     constructor(private http: HttpClient) { }
-
+    // alle countries retourneren
     getCosts(): Observable<Costs[]> {
         return this.http
             .get<Costs[]>(this.url)

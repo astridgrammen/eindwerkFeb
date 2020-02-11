@@ -15,13 +15,16 @@ import { CostService } from './shared/services/cost.service';
 import { NavComponent } from './nav/nav.component' ;
 
 import { HttpClientModule } from '@angular/common/http';
+import { BarChartComponent } from './barchart/barchart.component';
+import { ChartsModule } from 'ng2-charts';
 
 const routes: Routes = [
 	{ path: '', redirectTo: 'home', pathMatch: 'full' },
 	{ path: 'home', component: HomeComponent },
 	{ path: 'overview', component: OverviewComponent },
 	{ path: 'nav', component: NavComponent },
-	{ path: 'login' ,component: LoginComponent}
+	{ path: 'login' ,component: LoginComponent},
+	{ path: 'barchart', component: BarChartComponent}
 ];
 
 var config = {
@@ -35,14 +38,15 @@ var config = {
   };
 
 @NgModule({
-	declarations: [ AppComponent, HomeComponent, OverviewComponent, LoginComponent, NavComponent ],
+	declarations: [ AppComponent, HomeComponent, OverviewComponent, LoginComponent, NavComponent, BarChartComponent ],
 	imports: [ 
 		BrowserModule,
 		HttpClientModule, 
 		AppRoutingModule,
 		RouterModule.forRoot(routes), 
 		AngularFireModule.initializeApp(config),
-		AngularFireAuthModule ],
+		AngularFireAuthModule,
+		ChartsModule ],
 	providers: [
 		CostService
 	],
