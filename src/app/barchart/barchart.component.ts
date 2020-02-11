@@ -19,7 +19,7 @@ export class BarChartComponent {
   barChartPlugins = [];
 
   barChartData: ChartDataSets[] = [
-    { data: [45, 37, 60, 70, 46, 33,22,33,55,96,43], label: 'Overview Costs' }
+    { data: [45, 37, 60, 70, 46, 33,22,33,55,96,44], label: 'Overview Costs' }
   ];
 
 }

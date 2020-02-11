@@ -1,13 +1,6 @@
 {
   "costs": [
     {
-      "id": 1,
-      "description": "Car insurrance",
-      "cost": 40,
-      "category": "Shopping",
-      "type": "Fixed cost"
-    },
-    {
       "id": 2,
       "description": "Carrefour",
       "cost": 89.49,
