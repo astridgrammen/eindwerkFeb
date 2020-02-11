@@ -2,10 +2,19 @@
 /*
 COLOURS
 
-#F0F7F7     licht blauw
-#AEDADA     donker blauw
+#0E3030     black
 
+#F0F7F7     light blue
+#AEDADA     dark blue
+#006666     dark dark blue
+#FFBC00     yellow
+#FFFCEF     light yellow
+#FF835D     pink
+#FFEEE9     light pink
 
+TEXT
+#97AAAA     light gray
+#006666     dark dark blue
 
 */
 
@@ -14,6 +23,8 @@ COLOURS
 
 h1{
     font-family: "Montserrat";
+    font-weight: 800;
+    color: #0E3030 ;
 }
 
 input.form-control-lg.edit {
@@ -26,4 +37,20 @@ input.form-control-lg.edit {
     border-top: none;
     border-width: thin!important;
     margin-bottom: 20px!important;
+}
+
+.container{
+    background-color: #F0F7F7 ;
+    padding: 20px;
+}
+
+.navigation a {
+    color: #006666;
+    font-family: "Montserrat";
+    font-weight: 800;
+    font-size: 1.4em;
+}
+.navigation a:hover{
+    color: #AEDADA;
+    text-decoration: none;
 }
