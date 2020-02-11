@@ -23,6 +23,14 @@
       "category": "Other",
       "type": "Variable cost",
       "date": "2020-02-06"
+    },
+    {
+      "id": 5,
+      "description": "auto",
+      "cost": "33",
+      "category": "Other",
+      "type": "Variable cost",
+      "date": "2020-02-03"
     }
   ]
 }
