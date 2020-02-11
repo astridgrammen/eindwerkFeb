@@ -1,3 +1,6 @@
+<li *ngIf="authService.isLoggedIn" class="nav-item">
+  <button (click)="authService.logout()">Logout</button>
+</li>
 <p>barchart works!</p>
 <div class="chart-wrapper">
     <canvas baseChart 
