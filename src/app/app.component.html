@@ -22,9 +22,10 @@
             <input type="text" value="{{ costs.cost }}" #newCost class="form-control-lg edit">
             <input type="text" value="{{ costs.category}}" #newCategory class="form-control-lg edit">
             <input type="text" value="{{ costs.type}}" #newType class="form-control-lg edit">
+            <input type="text" value="{{ costs.date}}" #newDate class="form-control-lg edit">
             <button (click)="deleteCost(costs.id)" class="btn btn-danger">X</button>
             <button class="btn btn-primary"
-              (click)="editCost(newId.value, newDescription.value, newCost.value, newCategory.value, newType.value)">Edit</button>
+              (click)="editCost(newId.value, newDescription.value, newCost.value, newCategory.value, newType.value,newDate.value)">Edit</button>
           </li>
         </div>
         <div class="col">
@@ -56,10 +57,16 @@
               <option value="Variable cost" #newType>Variable cost</option>
             </select>
           </div>
+          <div>
+          <form action="/action_page.php">
+            Date:
+            <input type="date" name="bday" #newDate>
+          </form>
+          </div>
           <button class="btn btn-primary"
-            (click)="addCost(newDescription.value, newCost.value, newCategory.value, newType.value)">Add</button>
+            (click)="addCost(newDescription.value, newCost.value, newCategory.value, newType.value, newDate.value)">Add</button>
         </div>
-        <div>select toevoegen</div>
+      
 
 
         <div class="text-center">Copyright Frauke, Janique & Astrid inc. &copy;2020</div>
