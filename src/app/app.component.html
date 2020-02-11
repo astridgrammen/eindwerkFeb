@@ -31,26 +31,60 @@
             <input type="text" value="{{ costs.cost }}" #newCost class="form-control-lg edit">
             <input type="text" value="{{ costs.category}}" #newCategory class="form-control-lg edit">
             <input type="text" value="{{ costs.type}}" #newType class="form-control-lg edit">
+            <input type="text" value="{{ costs.date}}" #newDate class="form-control-lg edit">
             <button (click)="deleteCost(costs.id)" class="btn btn-danger">X</button>
             <button class="btn btn-primary"
-              (click)="editCost(newId.value, newDescription.value, newCost.value, newCategory.value, newType.value)">Edit</button>
+              (click)="editCost(newId.value, newDescription.value, newCost.value, newCategory.value, newType.value,newDate.value)">Edit</button>
           </li>
         </div>
         <div class="col">
           <input type="text" placeholder="Description" #newDescription class="form-control-lg">
           <input type="text" placeholder="Cost" #newCost class="form-control-lg">
-          <input type="text" placeholder="Category" #newCategory class="form-control-lg">
-          <input type="text" placeholder="Type" #newType class="form-control-lg">
+          <!-- <input type="text" placeholder="Category" #newCategory class="form-control-lg">
+          <input type="text" placeholder="Type" #newType class="form-control-lg"> -->
+          <div>
+            Category:
+            <select>
+              <option value="Entertainment" #newCategory>Entertainment</option>
+              <option value="Shopping" #newCategory>Shopping</option>
+              <option value="Health" #newCategory>Health</option>
+              <option value="Savings" #newCategory>Savings</option>
+              <option value="Insurance" #newCategory>Insurance</option>
+              <option value="Transport" #newCategory>Transport</option>
+              <option value="Hobby" #newCategory>Hobby</option>
+              <option value="Groceries" #newCategory>Groceries</option>
+              <option value="Loan" #newCategory>Loan</option>
+              <option value="Gift" #newCategory>Gift</option>
+              <option value="Rent" #newCategory>Rent</option>
+              <option value="Other" #newCategory>Other</option>
+            </select>
+          </div>
+          <div>
+            Type cost:
+            <select>
+              <option value="Fixed Cost" #newType>Fixed Cost</option>
+              <option value="Variable cost" #newType>Variable cost</option>
+            </select>
+          </div>
+          <div>
+          <form action="/action_page.php">
+            Date:
+            <input type="date" name="bday" #newDate>
+          </form>
+          </div>
           <button class="btn btn-primary"
-            (click)="addCost(newDescription.value, newCost.value, newCategory.value, newType.value)">Add</button>
+            (click)="addCost(newDescription.value, newCost.value, newCategory.value, newType.value, newDate.value)">Add</button>
         </div>
-        <div>select toevoegen</div>
+      
 
 
         <div class="text-center">Copyright Frauke, Janique & Astrid inc. &copy;2020</div>
      
       </div>
     </div>
+
+    
+
 
 
       <!--
