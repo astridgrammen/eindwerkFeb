@@ -1,4 +1,6 @@
-<nav class="navbar  navigatie">
+<h1 *ngIf ="authService.isLoggedOut">Welkom op SmartSpend</h1>
+
+<nav class="navbar navigatie" *ngIf='authService.isLoggedIn'>
   <a class="navbar-brand" href="#">
     <img src="../assets/img/coins.png" width="70" height="70" class="d-inline-block align-top" alt="">
     SmartSpend
@@ -7,6 +9,10 @@
   <a routerLink="overview">Overview - </a>
   <a routerLink="nav">Nav -</a>
   <a routerLink="barchart">barchart -</a>
+  <button (click)="authService.logout()" *ngIf ="authService.isLoggedIn">Logout</button>
+
+
+
 </nav>
 
 <div class="container">

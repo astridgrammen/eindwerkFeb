@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CostService } from './shared/services/cost.service';
+import { AuthService } from './auth/auth.service.service';
 
 import { Costs } from './shared/model/costs.model';
 import { Observable } from 'rxjs';
@@ -14,9 +15,10 @@ import { Router } from '@angular/router';
 export class AppComponent implements OnInit {
 	costs$: Observable<Costs[]>;
 	currentcost$: Observable<Costs>;
-	constructor(private costService: CostService, private router: Router) {}
+	constructor(private costService: CostService, private router: Router, private authService: AuthService) {}
 	ngOnInit() {
 		this.costs$ = this.costService.getCosts();
+		if ( !this.authService.isLoggedIn) { this.router.navigate ([ '/login' ])};
 	}
 
 	addCost(costDescription: string, costCost: number, costCategory: string, costType: string, costDate: string) {
