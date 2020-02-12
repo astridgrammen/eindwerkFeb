@@ -18,9 +18,9 @@ export class HomeComponent implements OnInit {
 	constructor(private router: Router, private authService: AuthService, private costService: CostService) {}
 
 	ngOnInit() {
-		if (!this.authService.isLoggedIn) {
+		/*if (!this.authService.isLoggedIn) {
 			this.router.navigate([ '/login' ]);
-		}
+		}*/
 		this.costs$ = this.costService.getCosts();
 	}
 	addCost(costDescription: string, costCost: number, costCategory: string, costType: string, costDate: string) {
