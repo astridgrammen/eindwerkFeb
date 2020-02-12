@@ -12,7 +12,6 @@ import { AngularFireAuthModule } from "@angular/fire/auth";
 import { LoginComponent } from './admin/login/login.component';
 
 import { CostService } from './shared/services/cost.service';
-import { NavComponent } from './nav/nav.component' ;
 
 import { HttpClientModule } from '@angular/common/http';
 import { BarChartComponent } from './barchart/barchart.component';
@@ -22,7 +21,6 @@ const routes: Routes = [
 	{ path: '', redirectTo: 'home', pathMatch: 'full' },
 	{ path: 'home', component: HomeComponent },
 	{ path: 'overview', component: OverviewComponent },
-	{ path: 'nav', component: NavComponent },
 	{ path: 'login' ,component: LoginComponent},
 	{ path: 'barchart', component: BarChartComponent}
 ];
@@ -38,7 +36,7 @@ var config = {
   };
 
 @NgModule({
-	declarations: [ AppComponent, HomeComponent, OverviewComponent, LoginComponent, NavComponent, BarChartComponent ],
+	declarations: [ AppComponent, HomeComponent, OverviewComponent, LoginComponent, BarChartComponent ],
 	imports: [ 
 		BrowserModule,
 		HttpClientModule, 
