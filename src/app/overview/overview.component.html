@@ -1,3 +1,12 @@
-<p>overview works!</p>
+<h1>Overview of the costs</h1>
 
-<p>Dit is een test, enkel te zien bij het inloggen???</p>
+<div class="chart-wrapper">
+    <canvas baseChart 
+    [datasets]="barChartData"
+    [labels]="barChartLabels"
+    [options]="barChartOptions"
+    [plugins]="barChartPlugins"
+    [legend]="barChartLegend"
+    [chartType]="barChartType">
+  </canvas>
+</div>

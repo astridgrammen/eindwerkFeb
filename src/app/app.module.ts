@@ -14,15 +14,13 @@ import { LoginComponent } from './admin/login/login.component';
 import { CostService } from './shared/services/cost.service';
 
 import { HttpClientModule } from '@angular/common/http';
-import { BarChartComponent } from './barchart/barchart.component';
 import { ChartsModule } from 'ng2-charts';
 
 const routes: Routes = [
 	{ path: '', redirectTo: 'home', pathMatch: 'full' },
 	{ path: 'home', component: HomeComponent },
 	{ path: 'overview', component: OverviewComponent },
-	{ path: 'login' ,component: LoginComponent},
-	{ path: 'barchart', component: BarChartComponent}
+	{ path: 'login' ,component: LoginComponent}
 ];
 
 var config = {
@@ -36,7 +34,7 @@ var config = {
   };
 
 @NgModule({
-	declarations: [ AppComponent, HomeComponent, OverviewComponent, LoginComponent, BarChartComponent ],
+	declarations: [ AppComponent, HomeComponent, OverviewComponent, LoginComponent],
 	imports: [ 
 		BrowserModule,
 		HttpClientModule, 
