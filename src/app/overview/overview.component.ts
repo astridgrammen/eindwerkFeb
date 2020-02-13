@@ -32,7 +32,7 @@ export class OverviewComponent implements OnInit {
     'August',
     'October',
     'November',
-    'December'
+    'Decem'
   ];
   barChartType: ChartType = 'bar';
   barChartLegend = true;
