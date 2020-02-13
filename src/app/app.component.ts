@@ -13,6 +13,24 @@ import { Router } from '@angular/router';
 	styleUrls: [ './app.component.css' ]
 })
 export class AppComponent implements OnInit {
+	
+	//TEST INPUT TYPE
+	
+	selectedOption: string;
+	  printedOption: string;
+/*	  
+	  options = [
+		{ name: "option1", value: 1 },
+		{ name: "option2", value: 2 }
+	  ]
+
+	  print() {
+		this.printedOption = this.selectedOption;
+		console.log("My input: ", this.selectedOption);
+	  }
+*/
+	  //////////////////////////////////////
+
 	costs$: Observable<Costs[]>;
 	currentcost$: Observable<Costs>;
 	constructor(private costService: CostService, private router: Router, private authService: AuthService) {}

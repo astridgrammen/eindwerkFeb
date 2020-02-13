@@ -3,8 +3,13 @@ import { Component, OnInit } from '@angular/core';
 import { ChartOptions, ChartType, ChartDataSets } from 'chart.js';
 import { Label } from 'ng2-charts';
 
+import { CostService } from '../shared/services/cost.service';
+import { Observable } from 'rxjs/internal/Observable';
+
 import { AuthService } from '../auth/auth.service.service';
 import { Router } from '@angular/router';
+
+import { Costs } from '../shared/model/costs.model';
 
 @Component({
   selector: 'app-overview',
@@ -12,6 +17,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./overview.component.css']
 })
 export class OverviewComponent implements OnInit {
+  costs$: Observable<Costs[]>;
   barChartOptions: ChartOptions = {
     responsive: true
   };
@@ -31,16 +37,22 @@ export class OverviewComponent implements OnInit {
   barChartType: ChartType = 'bar';
   barChartLegend = true;
   barChartPlugins = [];
+  datachar = [];
 
   barChartData: ChartDataSets[] = [
-    { data: [45, 37, 60, 70, 46, 33, 22, 33, 55, 96, 44], label: 'Overview Costs' }
+    { data: this.datachar, label: 'Overview Costs' }
   ];
 
-  constructor(private router: Router, private authService: AuthService
+  constructor(private router: Router, private authService: AuthService, private costService: CostService
   ) { }
 
   ngOnInit() {
-    /*if ( !this.authService.isLoggedIn) { this.router.navigate ([ '/login' ])}*/
+    this.costs$ = this.costService.getCosts()
+    this.costs$.subscribe(res => {
+      for (let i = 0, l = res.length; i < l; i++) {
+        this.datachar.push(res[i].cost);
+    }}  
+      );
+console.log(this.datachar)
+    }
   }
-
-}

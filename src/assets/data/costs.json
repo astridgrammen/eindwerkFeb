@@ -31,6 +31,14 @@
       "category": "Other",
       "type": "Variable cost",
       "date": "2020-02-03"
+    },
+    {
+      "id": 6,
+      "description": "rent",
+      "cost": "350",
+      "category": "Other",
+      "type": "Variable cost",
+      "date": "2020-04-25"
     }
   ]
 }
