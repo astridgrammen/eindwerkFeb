@@ -1,47 +1,28 @@
 {
-  "costs": [
-    {
-      "id": 2,
-      "description": "Carrefour",
-      "cost": "89,49",
-      "category": "Shopping",
-      "type": "Variable cost",
-      "date": "2012-04-22"
-    },
-    {
-      "id": 3,
-      "description": "Huur",
-      "cost": "5000",
-      "category": "House",
-      "type": "Fixed",
-      "date": "2012-05-22"
-    },
-    {
-      "id": 4,
-      "description": "Auto",
-      "cost": "55",
-      "category": "Other",
-      "type": "Variable cost",
-      "date": "2020-02-06"
-<<<<<<< Updated upstream
-    },
-    {
-      "id": 5,
-      "description": "auto",
-      "cost": "33",
-      "category": "Other",
-      "type": "Variable cost",
-      "date": "2020-02-03"
-    },
-    {
-      "id": 6,
-      "description": "rent",
-      "cost": "350",
-      "category": "Other",
-      "type": "Variable cost",
-      "date": "2020-04-25"
-=======
->>>>>>> Stashed changes
-    }
-  ]
+	"costs": [
+		{
+			"id": 2,
+			"description": "Carrefour",
+			"cost": "89,49",
+			"category": "Shopping",
+			"type": "Variable cost",
+			"date": "2012-04-22"
+		},
+		{
+			"id": 3,
+			"description": "Huur",
+			"cost": "5000",
+			"category": "House",
+			"type": "Fixed",
+			"date": "2012-05-22"
+		},
+		{
+			"id": 4,
+			"description": "Auto",
+			"cost": "55",
+			"category": "Other",
+			"type": "Variable cost",
+			"date": "2020-02-06"
+		}
+	]
 }
