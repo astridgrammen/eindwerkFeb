@@ -17,7 +17,9 @@ import { Costs } from '../shared/model/costs.model';
   styleUrls: ['./overview.component.css']
 })
 export class OverviewComponent implements OnInit {
+
   costs$: Observable<Costs[]>;
+  
   barChartOptions: ChartOptions = {
     responsive: true
   };

@@ -10,16 +10,11 @@ export class CostService {
 	url = 'http://localhost:3000/costs';
 
 	constructor(private http: HttpClient) {}
-	// alle countries retourneren
+
 	getCosts(): Observable<Costs[]> {
 		return this.http.get<Costs[]>(this.url);
-		//.pipe(tap(result => console.log("via json-server: ", result)));
 	}
-	/*
-    getCost(id: number) {
-        return this.http.get<Costs>(`${this.url}/${id}`);
-    }
-    */
+
 	addCost(newCost: Costs): Observable<any> {
 		const headers = new HttpHeaders().set('Content-type', 'application/json');
 		return this.http.post(this.url, newCost, { headers: headers });

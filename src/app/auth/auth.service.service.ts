@@ -14,7 +14,7 @@ export class AuthService {
     this.afAuth.authState.subscribe(user => {                                 //Dit is een Observable
       if (user) {                                                             //If user is true dan ...
         this.user = user;
-        localStorage.setItem("user", JSON.stringify(this.user));              //Van boject een .json bestand maken
+        localStorage.setItem("user", JSON.stringify(this.user));              //Van object een .json bestand maken
       } else {
         localStorage.setItem("user", null);                                   //Anders, local storage = 0 => geen toegang
       }

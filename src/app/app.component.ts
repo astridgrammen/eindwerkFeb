@@ -13,23 +13,6 @@ import { Router } from '@angular/router';
 	styleUrls: [ './app.component.css' ]
 })
 export class AppComponent implements OnInit {
-	
-	//TEST INPUT TYPE
-	
-	selectedOption: string;
-	  printedOption: string;
-/*	  
-	  options = [
-		{ name: "option1", value: 1 },
-		{ name: "option2", value: 2 }
-	  ]
-
-	  print() {
-		this.printedOption = this.selectedOption;
-		console.log("My input: ", this.selectedOption);
-	  }
-*/
-	  //////////////////////////////////////
 
 	costs$: Observable<Costs[]>;
 	currentcost$: Observable<Costs>;
@@ -43,7 +26,7 @@ export class AppComponent implements OnInit {
 		// id === null, omdat deze auto wordt ingevuld door de json server
 		const newCost = new Costs(null, costDescription, costCost, costCategory, costType, costDate);
 		this.costService.addCost(newCost).subscribe((addedCost: Costs) => {
-			// countries opnieuw ophalen in de subscription
+
 			this.costs$ = this.costService.getCosts();
 		});
 	}
