@@ -4,3 +4,14 @@
 .check {
 	color: rgb(254, 176, 10);
 }
+
+.brd,
+select {
+	border: 2px solid rgb(254, 176, 10);
+	border-radius: 4px;
+	height: 50px;
+}
+.add {
+	background-color: rgb(255, 99, 76);
+	border-color: rgb(255, 99, 76);
+}
