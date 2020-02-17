@@ -2,20 +2,21 @@ import { Component, OnInit } from '@angular/core';
 import { CostService } from '../shared/services/cost.service';
 
 import { Costs } from '../shared/model/costs.model';
-import { Observable } from 'rxjs';
+import { Observable, from } from 'rxjs';
 
 import { AuthService } from '../auth/auth.service.service';
 import { Router } from '@angular/router';
-
-
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
 	selector: 'app-home',
 	templateUrl: './home.component.html',
 	styleUrls: [ './home.component.css' ]
 })
-
 export class HomeComponent implements OnInit {
+	faTrashAlt = faTrashAlt;
+	faCheck = faCheck;
 	costs$: Observable<Costs[]>;
 	currentcost$: Observable<Costs>;
 	constructor(private router: Router, private authService: AuthService, private costService: CostService) {}

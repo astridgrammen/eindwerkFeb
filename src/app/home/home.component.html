@@ -11,10 +11,13 @@
                         <input type="text" value="{{ costs.category}}" #newCategory class="form-control-lg edit">
                         <input type="text" value="{{ costs.type}}" #newType class="form-control-lg edit">
                         <input type="text" value="{{ costs.date}}" #newDate class="form-control-lg edit">
-                        <button (click)="deleteCost(costs.id)" class="btn"><i class="fa fa-trash">
+                        <button class="btn check"
+                            (click)="editCost(newId.value, newDescription.value, newCost.value, newCategory.value, newType.value,newDate.value)">
+                            <fa-icon [icon]="faCheck"></fa-icon>
+                        </button>
+                        <button (click)="deleteCost(costs.id)" class="btn trash"><fa-icon [icon]="faTrashAlt"></fa-icon>
                             </button>
-                        <button class="btn btn-primary"
-                            (click)="editCost(newId.value, newDescription.value, newCost.value, newCategory.value, newType.value,newDate.value)">Edit</button>
+                        
                     </li>
                 </div>
                 <div class="col">

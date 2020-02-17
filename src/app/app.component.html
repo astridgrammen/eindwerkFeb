@@ -2,18 +2,18 @@
 
 <nav class="sidenav  navigatie " *ngIf='authService.isLoggedIn'>
   <a class="navbar-brand" routerLink="home">
-    <img src="../assets/img/icon/logo_V02.png" width="100%" height="100%" class="d-inline-block align-top" alt="">
+    <img src="../assets/img/icon/logo_V02.png" width="130%" height="130%" class="d-inline-block align-top" alt="SmartSpend">
   </a>
   <hr>
   <a routerLink="home">
-    <img src="../assets/img/icon/-_huisje-wit-12.png" width="50%" height="50%" alt="">
+    <img src="../assets/img/icon/-_huisje-wit-12.png" width="40%" height="40%" alt="Home">
   </a>
   <a routerLink="overview">
-    <img src="../assets/img/icon/-_grafiek-wit-14.png" width="50%" height="50%" alt="">
+    <img src="../assets/img/icon/-_grafiek-wit-14.png" width="40%" height="40%" alt="Overview">
   </a>
   <hr>
   <a routerLink="overview" (click)="authService.logout()" *ngIf ="authService.isLoggedIn">
-    <img src="../assets/img/icon/-_logout.png" width="50%" height="50%" alt="">
+    <img src="../assets/img/icon/-_logout.png" width="50%" height="50%" alt="logout">
   </a>
 </nav>
 

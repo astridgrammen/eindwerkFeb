@@ -13,20 +13,20 @@ import { Router } from '@angular/router';
 	styleUrls: [ './app.component.css' ]
 })
 export class AppComponent implements OnInit {
-
 	costs$: Observable<Costs[]>;
 	currentcost$: Observable<Costs>;
 	constructor(private costService: CostService, private router: Router, private authService: AuthService) {}
 	ngOnInit() {
 		this.costs$ = this.costService.getCosts();
-		if ( !this.authService.isLoggedIn) { this.router.navigate ([ '/login' ])};
+		if (!this.authService.isLoggedIn) {
+			this.router.navigate([ '/login' ]);
+		}
 	}
 
 	addCost(costDescription: string, costCost: number, costCategory: string, costType: string, costDate: string) {
 		// id === null, omdat deze auto wordt ingevuld door de json server
 		const newCost = new Costs(null, costDescription, costCost, costCategory, costType, costDate);
 		this.costService.addCost(newCost).subscribe((addedCost: Costs) => {
-
 			this.costs$ = this.costService.getCosts();
 		});
 	}
