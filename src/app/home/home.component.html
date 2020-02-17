@@ -1,6 +1,6 @@
 <div class="container">
     <div class="container">
-        <h1>My costs!</h1>
+        <h1>Expenses</h1>
         <div class="row">
             <div class="col-md-12">
                 <div class="list-group">
@@ -11,7 +11,8 @@
                         <input type="text" value="{{ costs.category}}" #newCategory class="form-control-lg edit">
                         <input type="text" value="{{ costs.type}}" #newType class="form-control-lg edit">
                         <input type="text" value="{{ costs.date}}" #newDate class="form-control-lg edit">
-                        <button (click)="deleteCost(costs.id)" class="btn btn-danger">X</button>
+                        <button (click)="deleteCost(costs.id)" class="btn"><i class="fa fa-trash">
+                            </button>
                         <button class="btn btn-primary"
                             (click)="editCost(newId.value, newDescription.value, newCost.value, newCategory.value, newType.value,newDate.value)">Edit</button>
                     </li>
