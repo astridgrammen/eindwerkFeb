@@ -7,8 +7,6 @@ import { Observable } from 'rxjs';
 import { AuthService } from '../auth/auth.service.service';
 import { Router } from '@angular/router';
 
-
-
 @Component({
 	selector: 'app-home',
 	templateUrl: './home.component.html',
@@ -31,6 +29,7 @@ export class HomeComponent implements OnInit {
 		const newCost = new Costs(null, costDescription, costCost, costCategory, costType, costDate);
 		this.costService.addCost(newCost).subscribe((addedCost: Costs) => {
 			this.costs$ = this.costService.getCosts();
+			console.log(costCost[1].value);
 		});
 	}
 	deleteCost(value) {

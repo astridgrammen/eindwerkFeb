@@ -5,7 +5,7 @@
       "description": "Carrefour",
       "cost": "89.49",
       "category": "Shopping",
-      "type": "Variable cost",
+      "type": "kfrnfost",
       "date": "2012-04-22"
     },
     {
@@ -31,6 +31,26 @@
       "category": "Rent",
       "type": "Fixed Cost",
       "date": "2020-02-26"
+    },
+    {
+      "id": 6,
+      "description": "fr",
+      "cost": "51",
+      "category": "Entertainment",
+      "type": "Fixed Cost",
+      "date": ""
+    }
+  ],
+  "incomes": [
+    {
+      "id": 1,
+      "description": "Salary",
+      "income": 1650
+    },
+    {
+      "id": 2,
+      "description": "Loan",
+      "income": 500
     }
   ]
 }

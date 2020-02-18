@@ -7,7 +7,7 @@
                     <li class="list-group-item" *ngFor="let costs of costs$ | async ">
                         <input type="hidden" value="{{ costs.id }}" #newId class="form-control-lg edit">
                         <input type="text" value="{{ costs.description }}" #newDescription class="form-control-lg edit">
-                        <input type="text" value="{{ costs.cost }}" #newCost class="form-control-lg edit">
+                        <input type="number" value="{{ costs.cost }}" #newCost class="form-control-lg edit">
                         <input type="text" value="{{ costs.category}}" #newCategory class="form-control-lg edit">
                         <input type="text" value="{{ costs.type}}" #newType class="form-control-lg edit">
                         <input type="text" value="{{ costs.date}}" #newDate class="form-control-lg edit">
@@ -56,10 +56,31 @@
                 </div>
 
 
+                
+
+
 
                 <div class="text-center">Copyright Frauke, Janique & Astrid inc. &copy;2020</div>
 
             </div>
+
+            <div class="list-group">
+                <li class="list-group-item" *ngFor="let incomes of incomes$ | async ">
+                    <input type="hidden" value="{{ incomes.id }}" #nieuwIdI class="form-control-lg edit">
+                    <input type="text" value="{{ incomes.description }}" #newDescriptionI class="form-control-lg edit">
+                    <input type="number" value="{{ incomes.income }}" #newIncome class="form-control-lg edit">
+
+                    <button (click)="deleteIncome(incomes.id)" class="btn btn-danger">X</button>
+                    <button class="btn btn-primary"
+                        (click)="editIncome(nieuwIdI.value, newDescriptionI.value, newIncome.value)">Edit</button>
+                </li>
+            </div>
+            <div class="col">
+                <input type="text" placeholder="Description" #newDescriptionI class="form-control-lg">
+                <input type="text" placeholder="Income" #newIncome class="form-control-lg">
+            </div>
+            <button class="btn btn-primary"
+            (click)="addIncome(newDescriptionI.value, newIncome.value)">Add</button>
         </div>
     </div>
 </div>

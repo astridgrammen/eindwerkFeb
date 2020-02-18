@@ -1,0 +1,14 @@
+{
+    "incomes": [
+      {
+        "id": 1,
+        "description": "Salary",
+        "income": 1650
+      },
+      {
+        "id": 2,
+        "description": "Loan",
+        "income": 500
+      }
+    ]
+  }
