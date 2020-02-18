@@ -44,15 +44,8 @@ var config = {
 		RouterModule.forRoot(routes),
 		AngularFireModule.initializeApp(config),
 		AngularFireAuthModule,
-<<<<<<< HEAD
 		ChartsModule,
 		FontAwesomeModule
-=======
-		ChartsModule ],
-	providers: [
-		CostService,
-		IncomeService
->>>>>>> income-service
 	],
 	providers: [ CostService ],
 	bootstrap: [ AppComponent ]

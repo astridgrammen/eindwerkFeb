@@ -6,11 +6,8 @@ import { Observable, from } from 'rxjs';
 
 import { AuthService } from '../auth/auth.service.service';
 import { Router } from '@angular/router';
-<<<<<<< HEAD
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
-=======
->>>>>>> income-service
 
 @Component({
 	selector: 'app-home',

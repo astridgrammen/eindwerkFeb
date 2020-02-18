@@ -4,7 +4,6 @@
             <div class="col-md-12">
                 <div class="list-group">
                     <li class="list-group-item" *ngFor="let costs of costs$ | async ">
-<<<<<<< HEAD
                         <input type="hidden" value="{{ costs.id }}" #newId class="form-control-sm edit dtb">
                         <input type="text" value="{{ costs.description }}" #newDescription class="form-control-sm edit dtb">&nbsp;
                         <input type="text" value="{{ costs.cost }}" #newCost class="form-control-sm edit dtb">&nbsp;
@@ -61,84 +60,6 @@
                 <button class="btn btn-primary add" (click)="addCost(newDescription.value, newCost.value, newCategory.value, newType.value, newDate.value)">Add</button>
             </div>
         
-=======
-                        <input type="hidden" value="{{ costs.id }}" #newId class="form-control-lg edit">
-                        <input type="text" value="{{ costs.description }}" #newDescription class="form-control-lg edit">
-                        <input type="number" value="{{ costs.cost }}" #newCost class="form-control-lg edit">
-                        <input type="text" value="{{ costs.category}}" #newCategory class="form-control-lg edit">
-                        <input type="text" value="{{ costs.type}}" #newType class="form-control-lg edit">
-                        <input type="text" value="{{ costs.date}}" #newDate class="form-control-lg edit">
-                        <button (click)="deleteCost(costs.id)" class="btn btn-danger">X</button>
-                        <button class="btn btn-primary"
-                            (click)="editCost(newId.value, newDescription.value, newCost.value, newCategory.value, newType.value,newDate.value)">Edit</button>
-                    </li>
-                </div>
-                <div class="col">
-                    <input type="text" placeholder="Description" #newDescription class="form-control-lg">
-                    <input type="text" placeholder="Cost" #newCost class="form-control-lg">
-                    <div>
-                        <label for="category">Category:</label>
-                        <select id="category" name="category" class="form-control" #newCategory>
-                            <option value="Entertainment">Entertainment</option>
-                            <option value="Shopping">Shopping</option>
-                            <option value="Health">Health</option>
-                            <option value="Savings">Savings</option>
-                            <option value="Insurance">Insurance</option>
-                            <option value="Transport">Transport</option>
-                            <option value="Hobby">Hobby</option>
-                            <option value="Groceries">Groceries</option>
-                            <option value="Loan">Loan</option>
-                            <option value="Gift">Gift</option>
-                            <option value="Rent">Rent</option>
-                            <option value="Other">Other</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="type">Type cost:</label>
-                        <select id="type" name="type" class="form-control" #newType>
-                    
-                            <option value="Fixed Cost">Fixed Cost</option>
-                            <option value="Variable cost">Variable cost</option>
-                        </select>
-                    </div>
-                    <br>
-                    <div>
-                        <form action="/action_page.php">
-                            Date:
-                            <input type="date" name="date" #newDate>
-                        </form>
-                    </div>
-                    <button class="btn btn-primary"
-                        (click)="addCost(newDescription.value, newCost.value, newCategory.value, newType.value, newDate.value)">Add</button>
-                </div>
-
-
-                
-
-
-
-                <div class="text-center">Copyright Frauke, Janique & Astrid inc. &copy;2020</div>
-
-            </div>
-
-            <div class="list-group">
-                <li class="list-group-item" *ngFor="let incomes of incomes$ | async ">
-                    <input type="hidden" value="{{ incomes.id }}" #nieuwIdI class="form-control-lg edit">
-                    <input type="text" value="{{ incomes.description }}" #newDescriptionI class="form-control-lg edit">
-                    <input type="number" value="{{ incomes.income }}" #newIncome class="form-control-lg edit">
-
-                    <button (click)="deleteIncome(incomes.id)" class="btn btn-danger">X</button>
-                    <button class="btn btn-primary"
-                        (click)="editIncome(nieuwIdI.value, newDescriptionI.value, newIncome.value)">Edit</button>
-                </li>
-            </div>
-            <div class="col">
-                <input type="text" placeholder="Description" #newDescriptionI class="form-control-lg">
-                <input type="text" placeholder="Income" #newIncome class="form-control-lg">
-            </div>
-            <button class="btn btn-primary"
-            (click)="addIncome(newDescriptionI.value, newIncome.value)">Add</button>
->>>>>>> income-service
         </div>
     <hr>
     <div class="text-center">Copyright Frauke, Janique & Astrid inc. &copy;2020</div>
