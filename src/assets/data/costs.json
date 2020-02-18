@@ -1,17 +1,6 @@
 {
   "costs": [
     {
-<<<<<<< HEAD
-=======
-      "id": 2,
-      "description": "Carrefour",
-      "cost": "89.49",
-      "category": "Shopping",
-      "type": "kfrnfost",
-      "date": "2012-04-22"
-    },
-    {
->>>>>>> income-service
       "id": 3,
       "description": "Huur",
       "cost": "5000",
