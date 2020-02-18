@@ -12,6 +12,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { LoginComponent } from './admin/login/login.component';
 
 import { CostService } from './shared/services/cost.service';
+import { IncomeService } from './shared/services/income.service';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ChartsModule } from 'ng2-charts';
@@ -43,8 +44,15 @@ var config = {
 		RouterModule.forRoot(routes),
 		AngularFireModule.initializeApp(config),
 		AngularFireAuthModule,
+<<<<<<< HEAD
 		ChartsModule,
 		FontAwesomeModule
+=======
+		ChartsModule ],
+	providers: [
+		CostService,
+		IncomeService
+>>>>>>> income-service
 	],
 	providers: [ CostService ],
 	bootstrap: [ AppComponent ]

@@ -6,8 +6,11 @@ import { Observable, from } from 'rxjs';
 
 import { AuthService } from '../auth/auth.service.service';
 import { Router } from '@angular/router';
+<<<<<<< HEAD
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
+=======
+>>>>>>> income-service
 
 @Component({
 	selector: 'app-home',
@@ -32,6 +35,7 @@ export class HomeComponent implements OnInit {
 		const newCost = new Costs(null, costDescription, costCost, costCategory, costType, costDate);
 		this.costService.addCost(newCost).subscribe((addedCost: Costs) => {
 			this.costs$ = this.costService.getCosts();
+			console.log(costCost[1].value);
 		});
 	}
 	deleteCost(value) {
