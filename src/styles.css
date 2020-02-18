@@ -18,50 +18,92 @@ TEXT
 
 */
 
-
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
-h1{
-    font-family: "Montserrat";
-    font-weight: 800;
-    color: #0E3030 ;
+h1 {
+	font-family: "Montserrat";
+	font-weight: bold;
+	color: #0e3030;
 }
 
 input.form-control-lg.edit {
-    border: none!important;
-    border-bottom: #a79486!important;
-    border-bottom: dashed!important;
-    border-right: none;
-    border-left: none;
-    border-radius: 0px;
-    border-top: none;
-    border-width: thin!important;
-    margin-bottom: 20px!important;
+	border: none !important;
+	border-bottom: #a79486 !important;
+	border-bottom: dashed !important;
+	border-right: none;
+	border-left: none;
+	border-radius: 0px;
+	border-top: none;
+	border-width: thin !important;
+	margin-bottom: 20px !important;
 }
 
-.container{
-    background-color: #F0F7F7 ;
-    padding: 20px;
+.container {
+	background-color: #f0f7f7;
+	padding: 20px;
 }
 
-.navigation a {
-    color: #006666;
-    font-family: "Montserrat";
-    font-weight: 800;
-    font-size: 1.4em;
+/* .navigation a {
+	color: #006666;
+	font-family: "Montserrat";
+	font-weight: 800;
+	font-size: 1.4em;
 }
-.navigation a:hover{
-    color: #AEDADA;
-    text-decoration: none;
+.navigation a:hover {
+	color: #aedada;
+	text-decoration: none;
 }
 
-.navigatie{
-    background-color: #006666;
-    font-family: "Montserrat";
-    font-weight: 800;
-
+.navigatie {
+	background-color: #006666;
+	font-family: "Montserrat";
+	font-weight: 800;
 }
-.navigatie a{
-    font-size: 3em;
-    color: white;
+.navigatie a {
+	font-size: 3em;
+	color: white;
+} */
+
+/* The sidebar menu */
+.sidenav {
+	height: 100%; /* Full-height: remove this if you want "auto" height */
+	width: 7%; /* Set the width of the sidebar */
+	position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+	z-index: 1; /* Stay on top */
+	top: 0; /* Stay at the top */
+	left: 0;
+	background-color: rgb(27, 139, 138);
+	overflow-x: hidden; /* Disable horizontal scroll */
+	padding-top: 20px;
+	text-align: center;
+}
+
+/* The navigation menu links */
+.sidenav a {
+	padding: 6px 8px 6px 16px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #f1f1f1;
+	display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+	color: rgb(0, 84, 82);
+}
+
+/* Style page content */
+.main {
+	margin-left: 7%; /* Same as the width of the sidebar */
+	padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+	.sidenav {
+		padding-top: 15px;
+	}
+	.sidenav a {
+		font-size: 18px;
+	}
 }
