@@ -6,8 +6,25 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="faviS.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 </head>
-<body>
+<body ng-app='eindwerkFeb'>
+   
+  <div ng-controller="myCtrl">
+    <p>{{ CurrentDate | date:'dd/MM/yyyy'}}</p>
+    <p>{{ CurrentDate | date:'MM/dd/yyyy'}}</p>
+    <p>{{ CurrentDate | date:'dd/MM/yyyy HH:mm:ss'}}</p>
+  </div>
+  
   <app-root></app-root>
 </body>
+<script type="text/javascript">
+   
+  var app = angular.module('eindwerkFeb', []);
+ 
+  app.controller('myCtrl', ['$scope', '$http', function ($scope, $http) {
+     $scope.CurrentDate = new Date();
+  }]);
+ 
+</script>
 </html>
