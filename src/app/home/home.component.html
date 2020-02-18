@@ -4,24 +4,25 @@
             <div class="col-md-12">
                 <div class="list-group">
                     <li class="list-group-item" *ngFor="let costs of costs$ | async ">
-                        <input type="hidden" value="{{ costs.id }}" #newId class="form-control-sm edit">
-                        <input type="text" value="{{ costs.description }}" #newDescription class="form-control-sm edit">
-                        <input type="text" value="{{ costs.cost }}" #newCost class="form-control-sm edit">
-                        <input type="text" value="{{ costs.category}}" #newCategory class="form-control-sm edit">
-                        <input type="text" value="{{ costs.type}}" #newType class="form-control-sm edit">
-                        <input type="text" value="{{ costs.date}}" #newDate class="form-control-sm edit">
+                        <input type="hidden" value="{{ costs.id }}" #newId class="form-control-sm edit dtb">
+                        <input type="text" value="{{ costs.description }}" #newDescription class="form-control-sm edit dtb">&nbsp;
+                        <input type="text" value="{{ costs.cost }}" #newCost class="form-control-sm edit dtb">&nbsp;
+                        <input type="text" value="{{ costs.category}}" #newCategory class="form-control-sm edit dtb">&nbsp;
+                        <input type="text" value="{{ costs.type}}" #newType class="form-control-sm edit dtb">&nbsp;
+                        <input type="text" value="{{ costs.date}}" #newDate class="form-control-sm edit dtb">&nbsp;
                         <button class="btn check" (click)="editCost(newId.value, newDescription.value, newCost.value, newCategory.value, newType.value,newDate.value)">
                             <fa-icon [icon]="faCheck"></fa-icon>
                         </button>
                         <button (click)="deleteCost(costs.id)" class="btn trash">
                             <fa-icon [icon]="faTrashAlt"></fa-icon>
-                        </button>   
+                        </button>
                     </li>
                 </div>
                 <hr>
             </div>
         </div>
         <div class="row">
+            
             <div class="col-sm-auto ">
                 <input type="text" placeholder="Description" #newDescription class="form-control-lg brd">
             </div>
@@ -52,14 +53,16 @@
                     <option value="Variable cost">Variable cost</option>
                 </select>
             </div>
-            <div class="col-sm-auto data">
+            <div class="col-sm-auto auto">
                 <input type="date" name="date" class="brd" #newDate >  
             </div> 
             <div class="col-sm-auto">
                 <button class="btn btn-primary add" (click)="addCost(newDescription.value, newCost.value, newCategory.value, newType.value, newDate.value)">Add</button>
             </div>
+        
         </div>
     <hr>
     <div class="text-center">Copyright Frauke, Janique & Astrid inc. &copy;2020</div>
+
 </div>
        
