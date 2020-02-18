@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Costs } from '../model/costs.model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { tap } from 'rxjs/operators';
+//import { tap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
 @Injectable()
@@ -25,7 +25,6 @@ export class CostService {
 	}
 
 	editCost(newCost: Costs): Observable<any> {
-		//console.log(newCost.id);
 		const headers = new HttpHeaders().set('Content-type', 'application/json');
 		return this.http.put(this.url + '/' + newCost.id, newCost, {
 			headers: headers
