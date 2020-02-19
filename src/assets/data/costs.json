@@ -23,14 +23,6 @@
       "category": "Rent",
       "type": "Fixed Cost",
       "date": "2020-02-26"
-    },
-    {
-      "id": 6,
-      "description": "fr",
-      "cost": "51",
-      "category": "Entertainment",
-      "type": "Fixed Cost",
-      "date": ""
     }
   ],
   "incomes": [

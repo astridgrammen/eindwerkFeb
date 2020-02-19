@@ -19,10 +19,10 @@ TEXT
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
-h1 {
+.date {
 	font-family: "Montserrat";
-	font-weight: bold;
-	color: #0e3030;
+	color: #ffbb0057;
+	text-align: center;
 }
 
 input.form-control-lg.edit {
@@ -36,32 +36,6 @@ input.form-control-lg.edit {
 	border-width: thin !important;
 	margin-bottom: 20px !important;
 }
-
-/* .container {
-	background-color: #f0f7f7;
-	padding: 20px;
-} */
-
-/* .navigation a {
-	color: #006666;
-	font-family: "Montserrat";
-	font-weight: 800;
-	font-size: 1.4em;
-}
-.navigation a:hover {
-	color: #aedada;
-	text-decoration: none;
-}
-
-.navigatie {
-	background-color: #006666;
-	font-family: "Montserrat";
-	font-weight: 800;
-}
-.navigatie a {
-	font-size: 3em;
-	color: white;
-} */
 
 /* The sidebar menu */
 .sidenav {
@@ -109,4 +83,5 @@ input.form-control-lg.edit {
 
 p {
 	text-align: center;
+	font-family: "Montserrat";
 }

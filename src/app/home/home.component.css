@@ -1,24 +1,98 @@
+/*
+COLOURS
+
+#0E3030     black
+
+#F0F7F7     light blue
+#AEDADA     dark blue
+#006666     dark dark blue
+#FFBC00     yellow
+#FFFCEF     light yellow
+#FF835D     pink
+#FFEEE9     light pink
+
+TEXT
+#97AAAA     light gray
+#006666     dark dark blue
+
+*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 .trash {
-	color: rgb(255, 99, 76);
+	color: #ff835d;
 }
 .check {
-	color: rgb(254, 176, 10);
+	color: #ffbc00;
 }
 
 .brd,
 select {
-	border: 2px solid rgb(254, 176, 10);
+	border: 2px solid #ffbc00;
 	border-radius: 4px;
 	height: 40px;
 }
 .add {
-	background-color: rgb(255, 99, 76);
-	border-color: rgb(255, 99, 76);
+	background-color: #ff835d;
+	border-color: #ff835d;
 }
 .dtb {
 	border: 1px solid;
-	border-color: darkgray;
+	border-color: #97aaaa;
 	border-radius: 15px;
-	box-shadow: 5px 5px 5px grey;
+	box-shadow: 5px 5px 5px #97aaaa;
 	text-align: center;
+}
+
+h1 {
+	font-family: "Montserrat";
+	font-weight: bold;
+	color: #97aaaa;
+}
+
+input:active {
+	border: #ff835d;
+	box-shadow: none;
+}
+::placeholder,
+select,
+input[type=date],
+input[type=text] {
+	font-family: "Montserrat";
+	color: #97aaaa;
+	font-weight: bold;
+}
+
+select:focus,
+input[type= date]:focus,
+input[type=text]:focus {
+	color: #006666;
+}
+
+.ftr {
+	font-family: "Montserrat";
+	color: #97aaaa;
+	font-size: small;
+}
+
+.bck {
+	background-color: #f0f7f7;
+}
+
+button:hover,
+button:active,
+button:visited {
+	background: #ff531f;
+	border-color: #ff531f;
+	color: white;
+	box-shadow: none;
+}
+.addbtn {
+	background-color: #ff835d;
+	border-color: #ff835d;
+	border-radius: 50px;
+	align-items: center;
+	font-family: "Montserrat";
+	font-weight: bold;
+	box-shadow: none;
+	color: white;
 }
