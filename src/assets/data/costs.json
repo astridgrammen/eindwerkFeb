@@ -31,6 +31,22 @@
       "category": "Groceries",
       "type": "Variable cost",
       "date": "2020-04-03"
+    },
+    {
+      "id": 7,
+      "description": "t",
+      "cost": "334",
+      "category": "Hobby",
+      "type": "Variable cost",
+      "date": "2020-05-03"
+    },
+    {
+      "id": 8,
+      "description": "dd",
+      "cost": "5674",
+      "category": "Savings",
+      "type": "Variable cost",
+      "date": "2020-07-04"
     }
   ]
 }
