@@ -1,5 +1,6 @@
+<div class="container">
+<h3 class="date">{{today | date:'EE d MMMM y'}}</h3>
 <h1>Overview of the costs</h1>
-
 <div class="chart-wrapper">
     <canvas baseChart 
     [datasets]="barChartData"
@@ -9,4 +10,7 @@
     [legend]="barChartLegend"
     [chartType]="barChartType">
   </canvas>
+</div>
+<hr>
+<div class="text-center ftr">Copyright Chicks With Kicks inc. &copy;2020</div>
 </div>

@@ -10,23 +10,10 @@
 </head>
 
 <body ng-app='eindwerkFeb'>
-  
-  <!--   
-  <div ng-controller="myCtrl" >
-    <h3 class="date" *ngIf='authService.isLoggedIn'>{{ CurrentDate | date:'EEE d MMMM y'}}</h3>
-  </div> -->
   <app-root></app-root>
-
-  
 </body>
 
 <script type="text/javascript">
-   
   var app = angular.module('eindwerkFeb', []);
- 
-  app.controller('myCtrl', ['$scope', '$http', function ($scope, $http) {
-     $scope.CurrentDate = new Date();
-  }]);
- 
 </script>
 </html>

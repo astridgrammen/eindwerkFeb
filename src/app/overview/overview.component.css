@@ -25,3 +25,17 @@ h1 {
 	padding-top: 50px;
 	text-transform: uppercase;
 }
+
+.date {
+	font-family: "Montserrat";
+	color: #ffbb0057;
+	text-align: right;
+}
+.container {
+	padding: 50px 50px;
+}
+.ftr {
+	font-family: "Montserrat";
+	color: #97aaaa;
+	font-size: small;
+}

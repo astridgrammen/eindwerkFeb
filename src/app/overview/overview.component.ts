@@ -104,4 +104,5 @@ export class OverviewComponent implements OnInit {
 		});
 		console.log(this.datachar);
 	}
+	today: number = Date.now();
 }

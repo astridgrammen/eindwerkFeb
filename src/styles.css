@@ -19,12 +19,6 @@ TEXT
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
-.date {
-	font-family: "Montserrat";
-	color: #ffbb0057;
-	text-align: center;
-}
-
 input.form-control-lg.edit {
 	border: none !important;
 	border-bottom: #a79486 !important;

@@ -54,4 +54,6 @@ export class HomeComponent implements OnInit {
 			this.costs$ = this.costService.getCosts();
 		});
 	}
+
+	today: number = Date.now();
 }

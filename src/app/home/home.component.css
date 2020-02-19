@@ -116,3 +116,9 @@ input[type=text]:focus {
 .container {
 	padding: 50px 50px;
 }
+
+.date {
+	font-family: "Montserrat";
+	color: #ffbb0057;
+	text-align: right;
+}
