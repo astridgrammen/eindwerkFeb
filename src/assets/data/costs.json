@@ -1,28 +1,28 @@
 {
-	"costs": [
-		{
-			"id": 3,
-			"description": "Huur",
-			"cost": "5000",
-			"category": "House",
-			"type": "Fixed",
-			"date": "2020-01-22"
-		},
-		{
-			"id": 4,
-			"description": "auto",
-			"cost": "55",
-			"category": "Other",
-			"type": "Variable cost",
-			"date": "2020-02-06"
-		},
-		{
-			"id": 5,
-			"description": "Huur",
-			"cost": "450",
-			"category": "Rent",
-			"type": "Fixed Cost",
-			"date": "2020-02-26"
-		}
-	]
+  "costs": [
+    {
+      "id": 3,
+      "description": "Huur",
+      "cost": "5000",
+      "category": "House",
+      "type": "Fixed",
+      "date": "2020-01-22"
+    },
+    {
+      "id": 4,
+      "description": "auto",
+      "cost": "55",
+      "category": "Other",
+      "type": "Variable cost",
+      "date": "2020-02-06"
+    },
+    {
+      "id": 5,
+      "description": "Huur",
+      "cost": "450",
+      "category": "Rent",
+      "type": "Fixed Cost",
+      "date": "2020-02-26"
+    }
+  ]
 }

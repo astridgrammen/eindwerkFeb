@@ -41,10 +41,7 @@ select {
 	border-radius: 4px;
 	height: 40px;
 }
-.add {
-	background-color: #ff835d;
-	border-color: #ff835d;
-}
+
 .dtb {
 	border: 1px solid;
 	border-color: #97aaaa;
@@ -107,6 +104,13 @@ input[type=text]:focus {
 	font-weight: bold;
 	box-shadow: none;
 	color: white;
+}
+.addbtn:hover,
+.addbtn:active {
+	background: #ff531f;
+	border-color: #ff531f;
+	color: white;
+	box-shadow: none;
 }
 
 .container {
