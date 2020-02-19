@@ -1,7 +1,7 @@
-
+<!-- the sidebar -->
 <nav class="sidenav  navigatie " *ngIf='authService.isLoggedIn'>
   <a class="navbar-brand" routerLink="home">
-    <img src="../assets/img/icon/logo_V02.png" width="130%" height="130%" class="d-inline-block align-top" alt="SmartSpend">
+    <img src="../assets/img/icon/logo_V02.png"   class="d-inline-block align-top img-fluid align-center" alt="SmartSpend">
   </a>
   <hr>
   <a routerLink="home">
@@ -15,6 +15,7 @@
     <fa-icon [icon]="faPowerOff"></fa-icon>
   </a>
 </nav>
+<!-- Page content -->
 <div class="container">
   <router-outlet></router-outlet>
 </div>

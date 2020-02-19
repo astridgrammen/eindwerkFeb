@@ -25,6 +25,16 @@ TEXT
 	color: #ffbc00;
 }
 
+.check:focus,
+.check:active,
+.check:hover,
+.check:visited {
+	background: #ffbc00;
+	border-color: #ffbc00;
+	color: white;
+	box-shadow: none;
+}
+
 .brd,
 select {
 	border: 2px solid #ffbc00;
@@ -66,6 +76,7 @@ select:focus,
 input[type= date]:focus,
 input[type=text]:focus {
 	color: #006666;
+	box-shadow: none;
 }
 
 .ftr {
@@ -78,9 +89,9 @@ input[type=text]:focus {
 	background-color: #f0f7f7;
 }
 
-button:hover,
-button:active,
-button:visited {
+.trash:hover,
+.trash:active,
+.trash:visited {
 	background: #ff531f;
 	border-color: #ff531f;
 	color: white;
