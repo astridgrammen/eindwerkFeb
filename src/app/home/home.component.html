@@ -1,68 +1,64 @@
 <div class="container">
-    
-        <h1>Expenses</h1>
-        <div class="row d-flex flex-row justify-content-center">
-        
-            <div class="p-2 ">
-                <input type="text" placeholder="Description" #newDescription class=" brd">
-            </div>
-            <div class="p-2 ">
-                <input type="text" placeholder="Cost" #newCost class="brd">
-            </div>
-            <div class="p-2">
-                <select id="category" name="category" #newCategory placeholder="Category">
-                    <option value="" disabled selected>Category</option>
-                    <option value="Entertainment">Entertainment</option>
-                    <option value="Shopping">Shopping</option>
-                    <option value="Health">Health</option>
-                    <option value="Savings">Savings</option>
-                    <option value="Insurance">Insurance</option>
-                    <option value="Transport">Transport</option>
-                    <option value="Hobby">Hobby</option>
-                    <option value="Groceries">Groceries</option>
-                    <option value="Loan">Loan</option>
-                    <option value="Gift">Gift</option>
-                    <option value="Rent">Rent</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div>
-            <div class="p-2 ">
-                <select id="type" name="type" #newType>
-                    <option value="" disabled selected>Type cost</option>
-                    <option value="Fixed Cost">Fixed Cost</option>
-                    <option value="Variable cost">Variable cost</option>
-                </select>
-            </div>
-            <div class="p-2 ">
-                <input type="date" name="date" class="brd" #newDate>
-            </div>
-            <div class="p-2 ">
-                <button class="btn addbtn"
-                    (click)="addCost(newDescription.value, newCost.value, newCategory.value, newType.value, newDate.value)">Add</button>
-            </div>
+    <h1>Expenses</h1>
+    <div class="row d-flex flex-row justify-content-center">
+        <div class="p-2 ">
+            <input type="text" placeholder="Description" #newDescription class=" brd">
         </div>
-        <div class="row">
-            <div class="col-md-12 ">
-                <div class="list-group ">
-                    <li class="list-group-item text-center d-inline-block bck" *ngFor="let costs of costs$ | async ">
-                        <input type="hidden" value="{{ costs.id }}" #newId class="form-control-sm edit dtb ">
-                        <input type="text" value="{{ costs.description }}" #newDescription class="form-control-sm edit dtb">&nbsp;
-                        <input type="text" value="{{ costs.cost }}" #newCost class="form-control-sm edit dtb">&nbsp;
-                        <input type="text" value="{{ costs.category}}" #newCategory class="form-control-sm edit dtb">&nbsp;
-                        <input type="text" value="{{ costs.type}}" #newType class="form-control-sm edit dtb">&nbsp;
-                        <input type="text" value="{{ costs.date}}" #newDate class="form-control-sm edit dtb">&nbsp;
-                        <button class="btn check" (click)="editCost(newId.value, newDescription.value, newCost.value, newCategory.value, newType.value,newDate.value)">
-                            <fa-icon [icon]="faCheck"></fa-icon>
-                        </button>
-                        <button (click)="deleteCost(costs.id)" class="btn trash">
-                            <fa-icon [icon]="faTrashAlt"></fa-icon>
-                        </button>
-                    </li>
-                </div>
-                <br>
-            </div>
+        <div class="p-2 ">
+            <input type="text" placeholder="Cost" #newCost class="brd">
         </div>
-        
+        <div class="p-2">
+            <select id="category" name="category" #newCategory placeholder="Category">
+                <option value="" disabled selected>Category</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Health">Health</option>
+                <option value="Savings">Savings</option>
+                <option value="Insurance">Insurance</option>
+                <option value="Transport">Transport</option>
+                <option value="Hobby">Hobby</option>
+                <option value="Groceries">Groceries</option>
+                <option value="Loan">Loan</option>
+                <option value="Gift">Gift</option>
+                <option value="Rent">Rent</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        <div class="p-2 ">
+            <select id="type" name="type" #newType>
+                <option value="" disabled selected>Type cost</option>
+                <option value="Fixed Cost">Fixed Cost</option>
+                <option value="Variable cost">Variable cost</option>
+            </select>
+        </div>
+        <div class="p-2 ">
+            <input type="date" name="date" class="brd" #newDate>
+        </div>
+        <div class="p-2 ">
+            <button class="btn addbtn" (click)="addCost(newDescription.value, newCost.value, newCategory.value, newType.value, newDate.value)">Add</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 ">
+            <div class="list-group ">
+                <li class="list-group-item text-center d-inline-block bck" *ngFor="let costs of costs$ | async ">
+                    <input type="hidden" value="{{ costs.id }}" #newId class="form-control-sm edit dtb ">
+                    <input type="text" value="{{ costs.description }}" #newDescription class="form-control-sm edit dtb">&nbsp;
+                    <input type="text" value="{{ costs.cost }}" #newCost class="form-control-sm edit dtb">&nbsp;
+                    <input type="text" value="{{ costs.category}}" #newCategory class="form-control-sm edit dtb">&nbsp;
+                    <input type="text" value="{{ costs.type}}" #newType class="form-control-sm edit dtb">&nbsp;
+                    <input type="text" value="{{ costs.date}}" #newDate class="form-control-sm edit dtb">&nbsp;
+                    <button class="btn check" (click)="editCost(newId.value, newDescription.value, newCost.value, newCategory.value, newType.value,newDate.value)">
+                        <fa-icon [icon]="faCheck"></fa-icon>
+                    </button>
+                    <button (click)="deleteCost(costs.id)" class="btn trash">
+                        <fa-icon [icon]="faTrashAlt"></fa-icon>
+                    </button>
+                </li>
+            </div>
+            <br>
+        </div>
+    </div>  
     <hr>
     <div class="text-center ftr">Copyright Chicks With Kicks inc. &copy;2020</div>
 </div>

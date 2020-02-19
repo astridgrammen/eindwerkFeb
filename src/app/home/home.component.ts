@@ -15,18 +15,19 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 	styleUrls: [ './home.component.css' ]
 })
 export class HomeComponent implements OnInit {
+	//fontawesome icon
 	faTrashAlt = faTrashAlt;
 	faCheck = faCheck;
+
 	costs$: Observable<Costs[]>;
 	currentcost$: Observable<Costs>;
+
 	constructor(private router: Router, private authService: AuthService, private costService: CostService) {}
 
 	ngOnInit() {
-		/*if (!this.authService.isLoggedIn) {
-			this.router.navigate([ '/login' ]);
-		}*/
 		this.costs$ = this.costService.getCosts();
 	}
+
 	addCost(costDescription: string, costCost: number, costCategory: string, costType: string, costDate: string) {
 		// id === null, omdat deze auto wordt ingevuld door de json server
 		const newCost = new Costs(null, costDescription, costCost, costCategory, costType, costDate);
@@ -35,6 +36,7 @@ export class HomeComponent implements OnInit {
 			console.log(costCost[1].value);
 		});
 	}
+
 	deleteCost(value) {
 		this.costService.deleteCost(value).subscribe();
 	}
