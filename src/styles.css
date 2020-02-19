@@ -39,8 +39,8 @@ input.form-control-lg.edit {
 
 /* The sidebar menu */
 .sidenav {
-	margin: 0;
-	padding: 0;
+	margin: 0px;
+	padding: 40px 0px;
 	width: 7%; /* Set the width of the sidebar */
 	height: 100%; /* Full-height: remove this if you want "auto" height */
 	background-color: rgb(28, 132, 131);
@@ -67,11 +67,6 @@ input.form-control-lg.edit {
 	color: rgb(0, 84, 82);
 }
 
-/* Style page content */
-.main {
-	margin-left: 7%; /*Same as the width of the sidebar */
-	padding: 1px 16px;
-}
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 
 @media screen and (max-width: 700px) {

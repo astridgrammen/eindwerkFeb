@@ -107,3 +107,7 @@ input[type=text]:focus {
 	box-shadow: none;
 	color: white;
 }
+
+.container {
+	padding: 50px 50px;
+}
