@@ -1,0 +1,27 @@
+/*
+COLOURS
+
+#0E3030     black
+
+#F0F7F7     light blue
+#AEDADA     dark blue
+#006666     dark dark blue
+#FFBC00     yellow
+#FFFCEF     light yellow
+#FF835D     pink
+#FFEEE9     light pink
+
+TEXT
+#97AAAA     light gray
+#006666     dark dark blue
+
+*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+h1 {
+	font-family: "Montserrat";
+	font-weight: bold;
+	color: #97aaaa;
+	padding-top: 50px;
+	text-transform: uppercase;
+}
