@@ -23,6 +23,14 @@
       "category": "Rent",
       "type": "Fixed Cost",
       "date": "2020-02-26"
+    },
+    {
+      "id": 6,
+      "description": "sdf",
+      "cost": "df",
+      "category": "Entertainment",
+      "type": "Fixed Cost",
+      "date": "2020-02-12"
     }
   ],
   "incomes": [

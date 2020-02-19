@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Costs } from '../model/costs.model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { map } from 'rxjs/operators';
 
 //import { tap } from 'rxjs/operators';
-import { Observable } from 'rxjs';
+import { Observable, from } from 'rxjs';
 
 @Injectable()
 export class CostService {
@@ -12,7 +13,7 @@ export class CostService {
 	constructor(private http: HttpClient) {}
 
 	getCosts(): Observable<Costs[]> {
-		return this.http.get<Costs[]>(this.url);
+		return this.http.get<Costs[]>(this.url).pipe(map((res) => res.reverse()));
 	}
 
 	addCost(newCost: Costs): Observable<any> {

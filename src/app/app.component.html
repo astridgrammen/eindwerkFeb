@@ -5,17 +5,16 @@
   </a>
   <hr>
   <a routerLink="home">
-    <img src="../assets/img/icon/-_huisje-wit-12.png" width="40%" height="40%" alt="Home">
+    <fa-icon [icon]="faHome"></fa-icon>
   </a>
   <a routerLink="overview">
-    <img src="../assets/img/icon/-_grafiek-wit-14.png" width="40%" height="40%" alt="Overview">
+    <fa-icon [icon]="faChartLine"></fa-icon>
   </a>
   <hr>
   <a routerLink="overview" (click)="authService.logout()" *ngIf ="authService.isLoggedIn">
-    <img src="../assets/img/icon/-_logout.png" width="50%" height="50%" alt="logout">
+    <fa-icon [icon]="faPowerOff"></fa-icon>
   </a>
 </nav>
-
 <div class="container">
   <router-outlet></router-outlet>
 </div>

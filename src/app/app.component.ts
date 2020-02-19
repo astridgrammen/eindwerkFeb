@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 import { AuthService } from './auth/auth.service.service';
-
-
 import { Router } from '@angular/router';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { faChartLine } from '@fortawesome/free-solid-svg-icons';
+import { faPowerOff } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
 	selector: 'app-root',
@@ -11,13 +12,17 @@ import { Router } from '@angular/router';
 	styleUrls: [ './app.component.css' ]
 })
 export class AppComponent implements OnInit {
+	faHome = faHome;
+	faChartLine = faChartLine;
+	faPowerOff = faPowerOff;
 
 	constructor(private router: Router, private authService: AuthService) {}
 	ngOnInit() {
-
-		if ( !this.authService.isLoggedIn) { this.router.navigate ([ '/login' ])};
+		if (!this.authService.isLoggedIn) {
+			this.router.navigate([ '/login' ]);
+		}
 	}
-/*
+	/*
 	addCost(costDescription: string, costCost: number, costCategory: string, costType: string, costDate: string) {
 		// id === null, omdat deze auto wordt ingevuld door de json server
 		const newCost = new Costs(null, costDescription, costCost, costCategory, costType, costDate);
