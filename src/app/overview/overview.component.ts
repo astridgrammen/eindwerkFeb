@@ -106,7 +106,7 @@ export class OverviewComponent implements OnInit {
                                                                 dec = dec + parseInt(res[i].cost)
                                                                      }                              
     }
-    // de maanden pushen naar de array voor de char, nog aanvullen met andere maanden.
+    // de maanden pushen naar de array voor de char, nog aanvullen met andere maanden..
     this.datachar.push(jan,feb,mar,apr,may,jun,jul,aug,sep,oct,nov,dec);
     
   });
