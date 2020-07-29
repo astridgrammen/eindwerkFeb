@@ -1,4 +1,14 @@
 # EindwerkFeb
+Front-end eindwerk aan de Syntra Limburg in de richhting Full stack webdeveloper.
+In groepsverband gemaakt met 2 andere studenten.
+
+Smartspend helpt je een overzicht te geven in je kosten. Deze webapplicatie werd gemaakt in Angular, een open source front-end framework.
+We haalden de inspiratie voor dit project bij onszelf. Zelf ondervinden we dat het niet altijd simpel is om een overzicht bij te houden in wat je uitgeeft. Met deze webapplicatie is het gemakkelijk om een overzicht te krijgen in al je kosten. Deze webapplicatie is simpel in gebruik en straight to the point.
+Het was voor ons alle drie en uitdagend project waarbij we veel geleerd hebben via de trial-and-error methode.
+
+Inloggegevens:
+test@email 
+test123
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.22.
 
