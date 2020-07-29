@@ -7,7 +7,7 @@ We haalden de inspiratie voor dit project bij onszelf. Zelf ondervinden we dat h
 Het was voor ons alle drie en uitdagend project waarbij we veel geleerd hebben via de trial-and-error methode.
 
 Inloggegevens:
-test@email 
+test@email.com
 test123
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.22.
